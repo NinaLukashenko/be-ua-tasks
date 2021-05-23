@@ -6,5 +6,41 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'be-ua';
+  public title = 'be-ua';
+  public products = [
+    {code: 'CA001', name: 'Tesla', category: 'cars', quantity: 1},
+    {code: 'PH01', name: 'Samsung A3', category: 'phones', quantity: 5},
+    {code: 'PH02', name: 'Samsung A4', category: 'phones', quantity: 10},
+    {code: 'PH03', name: 'Samsung A5', category: 'phones', quantity: 8},
+    {code: 'CA002', name: 'Mercedes', category: 'cars', quantity: 10},
+    {code: 'T0002', name: 'Tesla', category: 'cars', quantity: 5},
+    {code: 'VO002', name: 'Volvo', category: 'cars', quantity: 4},
+    {code: 'FRD01', name: 'Ford', category: 'others', quantity: 8},
+    {code: 'PR04', name: 'E-book', category: 'others', quantity: 8},
+    {code: 'A0005', name: 'Audi', category: 'cars', quantity: 13},
+    {code: 'H0001', name: 'Honda', category: 'cars', quantity: 8},
+  ];
 }
+
+// TODO:
+// 1. Описать интерфейс для products
+// 2. Вывести в таблицу только продукты, у которых category равен cars
+// 3. Для ячейки таблицы, в которой название продукта равно Volvo задать класс sale
+// 4. Отсортировать таблицу по возрастанию значения колонки Quantity
+// 5. Таблица Users
+  // 5.1 Ознакомится с https://jsonplaceholder.typicode.com/
+  // 5.2 Сделать фетч запрос для получения списка users
+  // 5.3 Отрисовать таблицу Users* по аналогии с таблицей Products
+  // используется компонент библиотеки PrimeNg, ссылка на доки:
+  // https://www.primefaces.org/primeng/v9-lts/#/table
+  // NOTE:* в таблице Users должно быть пять колонок: имя пользователя, имейл, город проживания, телефон, вебсайт.
+// 6. Добавить дочерний компонент,
+// 6.1 в дочерний компонент передать первый обьект из массива products
+// 6.2 отрисовать его с помошью компонента Card библиотеки PrimeNg, доки:
+// https://www.primefaces.org/primeng/v9-lts/#/card
+// NOTE: дизайн на свой вкус (без картинки) вывести информацию по всем свойствам обьекта
+// 6.3 в футере карточки добавить кнопку "Дублировать"
+// 6.4 по нажатию на кнопку в родительском компоненте
+// в таблицу добавится еще одна строка со следующими характеристиками продукта:
+// {code: 'CA001*', name: 'Tesla*', category: 'cars', quantity: 0},
+// 7. добавить хук-метод ngAfterViewInit(), в котором в консоль вывести оба массива - с продуктами и пользователями
